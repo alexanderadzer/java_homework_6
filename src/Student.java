@@ -24,4 +24,8 @@ public class Student extends Person {
                 ", isBanned=" + isBanned +
                 '}';
     }
+
+    public Integer[] getMarkArray() {
+        return markArray;
+    }
 }
