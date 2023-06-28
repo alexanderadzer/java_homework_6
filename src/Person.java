@@ -1,40 +1,43 @@
 public class Person {
-    private String firstName;
-    private String lastName;
-    //private String patronymic;
+    private final String firstName;
+    private final String lastName;
+    private Integer age;
+    private String sex;
+    private Integer IQ;
 
-    public Person() {
-    }
-
-    public Person(String firstName, String lastName/*, String patronymic*/) {
+    public Person(String firstName, String lastName) {
         this.firstName = firstName;
         this.lastName = lastName;
-        //this.patronymic = patronymic;
     }
 
-    @Override
-    public String toString() {
-        return "Person{" +
-                "Имя = '" + firstName + '\'' +
-                ", Фамилия = '" + lastName + '\'' +
-                '}';
+    public Person(String firstName, String lastName, Integer age, String sex, Integer IQ) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.age = age;
+        this.sex = sex;
+        this.IQ = IQ;
     }
 
     public String getFirstName() {
         return firstName;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
     public String getLastName() {
         return lastName;
     }
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
+
+    @Override
+    public String toString() {
+        return "Person{" +
+                "firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", age=" + age +
+                ", sex='" + sex + '\'' +
+                ", IQ=" + IQ +
+                '}';
     }
+
 
     public boolean compare(String name) {
         if (getLastName().equals(name)) {
